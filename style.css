@@ -16,7 +16,6 @@ nav{
   justify-content: space-between;
   gap: 0 10px;
   margin-top: 50px;
-  /* border-top: 1px solid hsl(256, 26%, 20%); */
   font-family: "Karla", sans-sarif;
   background-color: white;
 }
@@ -27,7 +26,6 @@ nav svg{
   width: 15%;
   margin-left: -20px;
 }
-
 .navbar{
   display: flex;
   justify-content: space-evenly;
@@ -45,6 +43,15 @@ nav svg{
 .navbar a:hover{
   background-color: hsl(256, 26%, 20%);
   color: white
+}
+.coverRight{
+  width: 100px;
+  height: 600px;
+  margin-right: -100px;
+  margin-top: -600px;
+  float: right;
+  background-color: white;
+  z-index: 50;
 }
 .welcome{
   z-index: -1;
@@ -71,9 +78,9 @@ nav svg{
   color: grey
 }
 .welcomeDesc h1{
-  font-size: 35px;
+  font-size: 30px;
   margin: 0 50px;
-  width: 250px;
+  width: 280px;
   line-height: 40px
 }
 .welcomeDesc > p{
@@ -85,7 +92,7 @@ nav svg{
   color: hsla(0, 0%, 98%, 0.788)
 }
 button{
-  font-family: "Lobster", sans-sarif;
+  font-family: sans-sarif;
   font-size: 10px;
   margin: 25px 60px;
   padding: 5px 20px;
@@ -160,12 +167,12 @@ button:hover{
   overflow: hidden;
 }
 .info p{
-  padding-top: 15px;
+  padding-top: 25px;
   padding-left: 10px;
   width: 90%;
   height: 100%;
   color: white;
-  font-size: 40px;
+  font-size: 35px;
   font-weight: 600px;
 }
 .info button{
@@ -174,6 +181,7 @@ button:hover{
   width: 120px;
   height: 30px;
   background-color: hsl(256, 26%, 20%);
+  font-family: sans-sarif;
   margin-right: 10px;
   z-index: 1;
 }
@@ -185,9 +193,23 @@ button:hover{
 }
 
 footer{
+  position: relative;
   font-size: 12px;
   margin: 0 auto;
-  width: 80%
+  width: 100%;
+  height: 300px;
+  background-color: ghostwhite;
+  overflow: hidden
+}
+footer > svg{
+  width: 60%;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.footerContent{
+  width: 90%;
+  margin: 0 auto
 }
 .footerHeader{
   display: flex;
@@ -196,6 +218,7 @@ footer{
   border-bottom: 1px solid grey;
   padding: 20px 0;
   font-family: "Karla", sans-sarif;
+  padding-top: 30px
 }
 .footerHeaderLinks{
   display: flex;
@@ -228,11 +251,16 @@ footer{
   font-weight: 900
 }
 .attribution{
-  margin-top: 100px
+  position: absolute;
+  bottom: 0;
+  left: 15%
 }
 
-
 @media screen and (min-width: 768px){
+  body{
+    margin: 0 auto;
+    width: 768px
+  }
   .welcome{
     margin: 0;
     height: 375px
@@ -246,13 +274,9 @@ footer{
   .welcomeDesc{
     width: 40%;
     position:absolute;
-    top: -25px;
+    top: -65px;
     left: -25px;
     line-height: 25px;
-  }
-  body{
-    margin: 0 auto;
-    width: 768px
   }
   .welcomeDesc p{
     width: 280px
@@ -290,12 +314,15 @@ footer{
     font-size: 20px
   }
   .info p{
-    padding: 25px;
-    width: 65%
+    padding-top: 40px;
+    padding-left: 25px;
+    width: 60%
   }
   footer{
-    margin: 0 auto;
-    width: 80%
+    height: 350px
+  }
+  .footerHeader{
+    padding-top: 40px
   }
   .footerCards{
     gap: 75px;
@@ -303,11 +330,14 @@ footer{
   .footerCard{
     font-size: 12px;
   }
+  .attribution{
+    left: 30%
+  }
 }
 @media screen and (min-width: 1200px){
   body{
     margin: 0 auto;
-    width: 95%
+    width: 1200px
   }
   .nav{
     margin-right: 200px;
@@ -330,6 +360,7 @@ footer{
     height: 500px
   }
   .welcomeDesc{
+    top: -20px;  
     margin-left: 100px
   }
   .welcomeDesc .line{
@@ -341,8 +372,8 @@ footer{
     line-height: 25px;
   }
   .welcomeDesc h1{
-    width: 340px;
-    font-size: 50px;
+    width: 400px;
+    font-size: 45px;
     line-height: 65px
   }
   .welcome img{
@@ -400,10 +431,11 @@ footer{
     height: 200px;
   }
   .info p{
-    padding: 35px;
+    padding-top: 40px;
+    padding-left: 35px;
     width: 75%;
     height: 100%;
-    font-size: 60px;
+    font-size: 50px;
     font-weight: 600px;
   }
   .info button{
@@ -416,14 +448,19 @@ footer{
     width: 120%
   }
   footer{
-    margin: 0 auto;
-    width: 69%
+    height: 400px;
   }
-  
+  .footerHeader{
+    padding-top: 50px
+  }
   .footerCards{
-    gap: 125px;
+    gap: 125px
   }
   .footerCard{
-    font-size: 14px;
+    font-size: 14px
+  }
+  .attribution{
+    font-size: 50px;
+    left: 35%
   }
 }
